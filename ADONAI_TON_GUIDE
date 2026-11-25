@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADONAI TON GUIDE</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#102b50">
+</head>
+
+<body>
+
+<header class="header">
+    <h2>ADONAI TON GUIDE</h2>
+    <p>Votre réussite universitaire commence ici.</p>
+</header>
+
+<nav class="menu">
+    <button onclick="afficher('accueil')">Accueil</button>
+    <button onclick="afficher('cours')">Mes cours</button>
+    <button onclick="afficher('documents')">Documents</button>
+    <button onclick="afficher('assistant')">Assistant IA</button>
+    <button onclick="afficher('profil')">Mon profil</button>
+</nav>
+
+<main class="container">
+
+    <section id="accueil" class="page">
+        <h1>Bienvenue sur ADONAI TON GUIDE</h1>
+        <p>Ta plateforme d'accompagnement universitaire.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Mes cours</h3>
+                <p>Retrouve tes matières universitaires.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mes documents</h3>
+                <p>Accède à tes fichiers PDF.</p>
+            </div>
+
+            <div class="card">
+                <h3>Assistant IA</h3>
+                <p>Obtiens de l'aide pour apprendre.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cours" class="page" hidden>
+        <h1>Mes cours</h1>
+        <p>Université Libre de Kinshasa (ULK)</p>
+        <ul>
+            <li>Algorithmique</li>
+            <li>Programmation Web</li>
+            <li>Langage C</li>
+            <li>Mathématiques</li>
+            <li>Électronique</li>
+            <li>Anglais</li>
+            <li>Informatique générale</li>
+        </ul>
+    </section>
+
+    <section id="documents" class="page" hidden>
+        <h1>Mes documents</h1>
+        <p>Importer un document pour tes révisions.</p>
+        <input type="file" accept=".pdf">
+    </section>
+
+    <section id="assistant" class="page" hidden>
+        <h1>Assistant IA</h1>
+        <p>Ton espace d'aide aux études.</p>
+        <input type="text" id="question" placeholder="Pose ta question...">
+        <button onclick="poserQuestion()">Envoyer</button>
+        <p id="reponse"></p>
+    </section>
+
+    <section id="profil" class="page" hidden>
+        <h1>Mon profil</h1>
+        <p>Bienvenue dans ton espace étudiant.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ADONAI TON GUIDE</p>
+    <p>Créé par ADONAI NZUZI</p>
+</footer>
+
+<script src="script.js"></script
+  <script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+        .catch(error => console.log("Erreur :", error));
+    });
+}
+</script>
+</body>
+</html>
